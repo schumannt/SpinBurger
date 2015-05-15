@@ -34,6 +34,7 @@
 	height: 2px;
 	background-color: white;
 	margin:4px 0px 4px 0px;
+	border-radius: 0.5em;
 }
 /* Rotate lines  on checked of box*/
 #menu-toggle:checked + #hamburgerBox > #hamburger{ 
@@ -48,24 +49,24 @@
 }
 /* rotates line 1 (top line before box rotates) to touch middle line */
 #menu-toggle:checked + #hamburgerBox > #hamburger> #line1 { 
-	-webkit-transform: rotate(40deg);
-	-moz-transform: rotate(40deg);
-	-o-transform: rotate(40deg);
-	-ms-transform: rotate(40deg);
-    transform: rotate(40deg);
+	-webkit-transform: rotate(43deg);
+	-moz-transform: rotate(43deg);
+	-o-transform: rotate(43deg);
+	-ms-transform: rotate(43deg);
+    transform: rotate(43deg);
 }
 /* rotates line 3 (top line before box rotates) to touch middle line */
 #menu-toggle:checked + #hamburgerBox > #hamburger> #line3 { 
-	-webkit-transform: rotate(-41deg);
-	-moz-transform: rotate(-41deg);
-	-o-transform: rotate(-41deg);
-	-ms-transform: rotate(-41deg);
-   transform: rotate(-41deg);
+	-webkit-transform: rotate(-43deg);
+	-moz-transform: rotate(-43deg);
+	-o-transform: rotate(-43deg);
+	-ms-transform: rotate(-43deg);
+   transform: rotate(-43deg);
 }
 /* shortens both top and bottom line and moves them to make arrow */
 #menu-toggle:checked + #hamburgerBox > #hamburger> .lineTransfer { 
 	width: 70%;
-	margin-left: 35%;
+	margin-left: 37%;
 }
 /* time taken to do above transformation */
 .delay{
