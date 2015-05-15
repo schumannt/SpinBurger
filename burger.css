@@ -21,6 +21,24 @@
 #hamburgerBox:hover{
 	background-color: #b9b9b9;
 }
+#hamburgerBox:hover > #hamburger>  #line1{
+	-webkit-transform: rotate(43deg);
+	-moz-transform: rotate(43deg);
+	-o-transform: rotate(43deg);
+	-ms-transform: rotate(43deg);
+    transform: rotate(43deg);
+}
+#hamburgerBox:hover > #hamburger> #line3 { 
+	-webkit-transform: rotate(-43deg);
+	-moz-transform: rotate(-43deg);
+	-o-transform: rotate(-43deg);
+	-ms-transform: rotate(-43deg);
+   transform: rotate(-43deg);
+}
+#hamburgerBox:hover > #hamburger> .lineTransfer { 
+	width: 70%;
+	margin-left: 37%;
+}
 /*centers lines*/
 /*TODO use better way to center*/
 #hamburger{
