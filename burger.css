@@ -1,3 +1,11 @@
+#menu{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50px;
+}
+
 /* Main Box contains all elements for hamburger*/
 #hamburgerBox{
 	margin:5px;
@@ -8,9 +16,9 @@
 	background-color: #a8a8a8;
 	border-radius: 0.5em;
 	cursor: pointer;
-	-webkit-box-shadow:    0 1px 0 #757575, 0 8px 10px #757575;
-    -moz-box-shadow: 0 1px 0 #757575, 0 8px 10px #757575;
-    box-shadow: 0 1px 0 #757575, 0 8px 10px #757575;
+	-webkit-box-shadow:    0 2px 1px #757575, 0 8px 10px #757575;
+    -moz-box-shadow: 0 2px 1px #757575, 0 8px 10px #757575;
+    box-shadow: 0 2px 1px #757575, 0 8px 10px #757575;
     -webkit-transition: -webkit-box-shadow .1s ease-in-out;
     -moz-transition: -moz-box-shadow .1s ease-in-out;
     -o-transition: -o-box-shadow .1s ease-in-out;
@@ -20,6 +28,14 @@
 /*lighten on hover*/
 #hamburgerBox:hover{
 	background-color: #b9b9b9;
+}
+#hamburgerBox:active{
+	top:1px;
+	box-shadow: 0 1px 0 #757575, 0 8px 10px #757575;
+}
+/* if using top down menu may want to rotate 90 so arrow points downwards*/
+#hamburgerBox:hover > #hamburger{
+	transform: rotate(0deg);
 }
 #hamburgerBox:hover > #hamburger>  #line1{
 	-webkit-transform: rotate(43deg);
@@ -44,7 +60,6 @@
 #hamburger{
 	padding-top: 1px;
 }
-
 /* Main logic for lines a default*/
 .lines{
 	position:relative;
@@ -54,7 +69,7 @@
 	margin:4px 0px 4px 0px;
 	border-radius: 0.5em;
 }
-/* Rotate lines  on checked of box*/
+/* Rotate lines on checked of box change to 90 for bottom up menu and 270 for top down*/
 #menu-toggle:checked + #hamburgerBox > #hamburger{ 
 	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
@@ -65,30 +80,9 @@
     -webkit-transform-origin: 50% 65%;
     transform-origin: 50% 65%;
 }
-/* rotates line 1 (top line before box rotates) to touch middle line */
-#menu-toggle:checked + #hamburgerBox > #hamburger> #line1 { 
-	-webkit-transform: rotate(43deg);
-	-moz-transform: rotate(43deg);
-	-o-transform: rotate(43deg);
-	-ms-transform: rotate(43deg);
-    transform: rotate(43deg);
-}
-/* rotates line 3 (top line before box rotates) to touch middle line */
-#menu-toggle:checked + #hamburgerBox > #hamburger> #line3 { 
-	-webkit-transform: rotate(-43deg);
-	-moz-transform: rotate(-43deg);
-	-o-transform: rotate(-43deg);
-	-ms-transform: rotate(-43deg);
-   transform: rotate(-43deg);
-}
-/* shortens both top and bottom line and moves them to make arrow */
-#menu-toggle:checked + #hamburgerBox > #hamburger> .lineTransfer { 
-	width: 70%;
-	margin-left: 37%;
-}
 /* time taken to do above transformation */
 .delay{
-	transition-duration: 1.2s;
+	transition-duration: 1s;
 }
 /* hides checkbox */
 #menu-toggle {
